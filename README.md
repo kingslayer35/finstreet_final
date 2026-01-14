@@ -41,20 +41,36 @@ The system is built with a strong focus on:
 ---
 ## End-to-End Trading Pipeline
 
-[ Data Acquisition & Preprocessing  
-(CSV Data Loader, Cleaning, Validation) ]  
-&nbsp;⬇️&nbsp;  
-[ Feature Engineering & ML Modeling  
-(Indicators, Lags, Prediction) ]  
-&nbsp;⬇️&nbsp;  
-[ Signal Generation & Risk Management  
-(BUY / SELL / HOLD, Position Size, SL / TP) ]  
-&nbsp;⬇️&nbsp;  
-[ Strategy Execution & Backtesting  
-(Paper Trades, PnL Tracking) ]  
-&nbsp;⬇️&nbsp;  
-[ Performance Evaluation & Analysis  
-(Returns, Drawdown, Sharpe) ]
+<div align="center">
+
+[ Data Acquisition & Preprocessing ]  
+*(CSV Data Loader, Cleaning, Validation)*  
+<br>
+↓
+<br>
+
+[ Feature Engineering & ML Modeling ]  
+*(Indicators, Lags, Prediction)*  
+<br>
+↓
+<br>
+
+[ Signal Generation & Risk Management ]  
+*(BUY / SELL / HOLD, Position Size, SL / TP)*  
+<br>
+↓
+<br>
+
+[ Strategy Execution & Backtesting ]  
+*(Paper Trades, PnL Tracking)*  
+<br>
+↓
+<br>
+
+[ Performance Evaluation & Analysis ]  
+*(Returns, Drawdown, Sharpe)*
+
+</div>
 
 
     
