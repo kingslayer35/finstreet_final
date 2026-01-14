@@ -12,9 +12,31 @@ This project implements a production-style algorithmic trading pipeline that con
 
 The system is built with a strong focus on:
 
-Methodological rigor
-Realistic trading constraints
-Explainable ML-driven decision making
+- Methodological rigor
+- Realistic trading constraints
+- Explainable ML-driven decision making
+
+## Performance Summary 
+
+| Metric               | Value       |
+|----------------------|-------------|
+| Initial Capital      | ₹100,000    |
+| Final Capital        | ₹100,264    |
+| Total Return         | ₹264        |
+| Total Return (%)     | 0.26%       |
+| Sharpe Ratio         | 1.60        |
+| Max Drawdown (%)     | 0.39%       |
+| Win Rate (%)         | 45.8%       |
+| Total Trades         | 24          |
+| Winning Trades       | 11          |
+| Losing Trades        | 13          |
+| Profit Factor        | 1.40        |
+
+Key Takeaways
+
+- Low drawdown indicates strong risk management
+- Profit factor > 1 confirms statistical edge
+- Strategy prioritizes capital preservation over aggressive returns
 
 ## Quick Start
 
