@@ -6,7 +6,7 @@
 
 </div>
 
-# Project Overview
+## Project Overview
 
 This project implements a production-style algorithmic trading pipeline that converts raw historical market data into actionable buy/sell signals, evaluates strategy robustness through realistic backtesting, and emphasizes risk management and reproducibility.
 
@@ -77,7 +77,7 @@ Follow these steps to get Finstreet up and running on your local machine.
 | 2026-01-08 | HOLD   | UP        | 50.69%     | 0.00%         | 0.0       | 0.0         |
 
 
-# Project Structure
+## Project Structure
 
 ```
 finstreet_final/
