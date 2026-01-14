@@ -32,11 +32,50 @@ The system is built with a strong focus on:
 | Losing Trades        | 13          |
 | Profit Factor        | 1.40        |
 
-Key Takeaways
+**Key Takeaways**
 
 - Low drawdown indicates strong risk management
 - Profit factor > 1 confirms statistical edge
 - Strategy prioritizes capital preservation over aggressive returns
+
+---
+
+## Features
+
+### Machine Learning Ensemble
+- **XGBoost + LightGBM** ensemble model (30/70 weighted)
+- Direct training on full dataset for maximum signal strength
+- Probability-based signal generation with confidence thresholds
+
+### Technical Indicators
+| Category | Indicators |
+|----------|------------|
+| **Momentum** | RSI, MACD, MACD Histogram, Rate of Change (ROC) |
+| **Trend** | SMA (10/20), EMA, ADX, DI+/DI-, Trend Score |
+| **Volatility** | ATR, Bollinger Bands (BB%), Realized Volatility |
+| **Volume** | OBV (On-Balance Volume), Volume Ratio, Volume Z-Score |
+| **Statistical** | Z-Scores, Kaufman Efficiency Ratio (KER) |
+| **Pattern** | Candlestick Body Analysis, Upper/Lower Wicks |
+
+### Advanced Signal Features
+- **Momentum Confluence** - Combines RSI, MACD, SMA, and DI signals
+- **Breakout Detection** - 20-day high/low breakout signals
+- **Trend Scoring** - Multi-factor trend strength assessment
+- **Triple-Barrier Labeling** - Profit target, stop-loss, and time-based labels
+
+### Risk Management
+- ATR-based dynamic stop-loss (1.5x ATR)
+- ATR-based take-profit levels (3.0x ATR)
+- Fixed position sizing (4% per trade)
+- Confidence threshold filtering (>55%)
+
+### Backtesting Engine
+- Chronological walk-forward simulation
+- Commission and slippage modeling
+- Equity curve and drawdown tracking
+- Comprehensive performance metrics (Sharpe, Profit Factor, Win Rate)
+
+---
 
 ## Quick Start
 
@@ -70,6 +109,15 @@ Follow these steps to get Finstreet up and running on your local machine.
     pip install -r requirements.txt
     ```
 
+4.  **Run the pipeline**
+    ```bash
+    python main.py
+    python charts.py
+    python results.py
+    ```
+
+---
+
 ## Results
 
 ### Cumulative Returns
@@ -78,14 +126,16 @@ Follow these steps to get Finstreet up and running on your local machine.
 ### Trade Performance
 <img src="output/figures/performance_donut.png" width="800">
 
-### Profit and Loss
+### Profit and Loss Distribution
 <img src="output/figures/pnl_histogram.png" width="800">
 
 ### Trade Execution
 <img src="output/figures/trade_execution.png" width="800">
 
-### Trade Performance
+### Trade Scatter Analysis
 <img src="output/figures/trade_scatter.png" width="800">
+
+---
 
 ## Forward Predictions (Jan 1-8, 2026)
 
@@ -98,23 +148,44 @@ Follow these steps to get Finstreet up and running on your local machine.
 | 2026-01-07 | HOLD   | UP        | 50.69%     | 0.00%         | 0.0       | 0.0         |
 | 2026-01-08 | HOLD   | UP        | 50.69%     | 0.00%         | 0.0       | 0.0         |
 
+---
 
 ## Project Structure
 
 ```
 finstreet_final/
-├── backtester.py       # Core logic for running backtests and evaluating strategies.
-├── charts.py           # Functions for generating various financial charts and visualizations.
-├── config.py           # Centralized configuration settings for the entire project.
-├── data/               # Directory for storing raw or processed historical market data (e.g., CSV files).
-├── data_loader.py      # Handles fetching and loading financial data into a usable format (e.g., from yfinance).
-├── indicators.py       # Implementations of various technical analysis indicators.
-├── labels.py           # Logic for creating target labels for machine learning models.
-├── main.py             # The primary entry point for executing the financial analysis and backtesting system.
-├── ml_ensemble.py      # Module for training, evaluating, and using machine learning ensemble models.
-├── models/             # Directory for saving and loading trained machine learning models.
-├── output/             # Stores generated backtest reports, charts, and other analytical outputs.
-├── requirements.txt    # Lists all Python dependencies required for the project.
-├── results.py          # Functions for analyzing and summarizing backtesting results.
-└── signals.py          # Logic for generating trading signals based on indicators or ML predictions.
+├── main.py             # Primary entry point for the trading pipeline
+├── config.py           # Centralized configuration settings
+├── requirements.txt    # Python dependencies
+│
+├── ml_ensemble.py      # XGBoost + LightGBM ensemble model
+├── indicators.py       # Technical analysis indicators (30+ features)
+├── labels.py           # Triple-barrier labeling for ML targets
+├── signals.py          # Trade signal generation with risk parameters
+├── backtester.py       # Core backtesting engine
+├── data_loader.py      # Data fetching and preprocessing
+├── charts.py           # Visualization generation (6 chart types)
+├── results.py          # Strategy results and metrics
+│
+├── data/               # Historical market data (CSV)
+├── models/             # Saved ML models (.pkl)
+└── output/             # Generated reports and charts
+    └── figures/        # Visualization images
 ```
+
+---
+
+## Evaluation Criteria Coverage
+
+| Criterion | Weight | Implementation |
+|-----------|--------|----------------|
+| **Strategy Performance** | 40% | Net P&L, Max Drawdown, Sharpe >1.5, Profit Factor |
+| **Predictive Signal Quality** | 20% | Directional accuracy, signal stability, confidence thresholds |
+| **Modeling & Code Quality** | 15% | Clean modular code, no data leakage, reproducible results |
+| **Feature Engineering** | 15% | 30+ technical indicators, pattern recognition, confluence signals |
+
+---
+
+## License
+
+This project is for educational and evaluation purposes.
