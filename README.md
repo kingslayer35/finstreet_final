@@ -39,18 +39,24 @@ The system is built with a strong focus on:
 - Strategy prioritizes capital preservation over aggressive returns
 
 ---
-## Flowchart
-  
-[ Data Acquisition & Preprocessing<br/>(FYERS API, Cleaning, Validation)]
-        ↓
-[ Feature Engineering & ML Modeling<br/>(Indicators, Lags, Prediction)]
-        ↓
-[ Signal Generation & Risk Management<br/>(BUY/SELL/HOLD, Position Size, SL/TP)]
-        ↓
-[ Strategy Execution & Backtesting<br/>(Paper Trades, PnL Tracking)]
-        ↓
-[ Performance Evaluation & Analysis<br/>(Returns, Drawdown, Sharpe)]
-        
+## End-to-End Trading Pipeline
+
+[ Data Acquisition & Preprocessing  
+(FYERS API, Cleaning, Validation) ]  
+&nbsp;⬇️&nbsp;  
+[ Feature Engineering & ML Modeling  
+(Indicators, Lags, Prediction) ]  
+&nbsp;⬇️&nbsp;  
+[ Signal Generation & Risk Management  
+(BUY / SELL / HOLD, Position Size, SL / TP) ]  
+&nbsp;⬇️&nbsp;  
+[ Strategy Execution & Backtesting  
+(Paper Trades, PnL Tracking) ]  
+&nbsp;⬇️&nbsp;  
+[ Performance Evaluation & Analysis  
+(Returns, Drawdown, Sharpe) ]
+
+
     
 
 
