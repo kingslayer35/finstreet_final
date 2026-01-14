@@ -1,0 +1,13 @@
+Category,Metric,Value
+Strategy Performance,Net P&L,₹263.91
+Strategy Performance,Total Return,0.26%
+Strategy Performance,Max Drawdown,0.39%
+Strategy Performance,Sharpe Ratio,1.60
+Strategy Performance,Profit Factor,1.40
+Strategy Performance,Total Trades,24
+Signal Quality,Directional Accuracy,45.8%
+Signal Quality,Winning Trades,11
+Signal Quality,Losing Trades,13
+Signal Quality,Signal Stability,0.99
+Risk Metrics,Initial Capital,"₹100,000"
+Risk Metrics,Final Capital,"₹100,263.91"
